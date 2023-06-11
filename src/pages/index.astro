@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import Card from '../components/Card.astro';
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="Tesla">
 	<main>
 		<header class="flex py-4 px-10 items-center justify-between z-40 text-white fixed top-0 w-full">
 			<div class="flex flex-grow basis-0">
@@ -34,16 +34,21 @@ import Card from '../components/Card.astro';
 		</header>
 
 		<section class="bg-black h-screen w-screen text-center relative overflow-hidden text-white">
-			<h2>
-				Experience Tesla
-			</h2>
-			<p>
-				Schedule a Demo Drive Today
-			</p>
+			<header class="z-30 relative">
+				<h2 class="pt-40 text-[40px] font-medium tracking-wider mb-1">
+					Experience Tesla
+				</h2>
+				<p class="text-sm font-thin">
+					Schedule a Demo Drive Today
+				</p>
+			</header>
 
-			<a href="#">Demo Drive</a>
-			<div class="absolute top-0 bottom-0">
-				<video autoplay muted loop src="/video.webm"></video>
+			<footer class="z-30 relative">
+				<a href="#">Demo Drive</a>
+			</footer>
+
+			<div class="absolute top-0 bottom-0 h-full z-10">
+				<video class="object-center" autoplay muted loop src="/video.webm"></video>
 			</div>
 		</section>
 	</main>
