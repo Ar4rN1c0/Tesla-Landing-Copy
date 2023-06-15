@@ -1,64 +1,23 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Logo from '../components/Logo.astro'
+import LandingHeader from '../components/LandingHeader.astro'
+import HeroSection from '../components/HeroSection.astro'
 ---
 
 <Layout title="Tesla">
-	<main class="overflow-hidden">
-		<header class="flex py-4 px-10 items-center justify-between z-40 text-white fixed top-0 w-full">
-			<div class="flex flex-grow basis-0">
-				<Logo />
-			</div>
-		
-			<nav>
-				<ul class="flex text-sm [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py2 ">
-					<li><a href="#">Model S</a></li>
-					<li><a href="#">Model 3</a></li>
-					<li><a href="#">Model X</a></li>
-					<li><a href="#">Model Y</a></li>
-					<li><a href="#">Solar Roof</a></li>
-					<li><a href="#">Solar Panels</a></li>
-					<li><a href="#">PowerWall</a></li>
-				</ul>
-			</nav>
+	<LandingHeader />
 
+	<main class="snap-y snap-mandatory scroll-smooth overflow-y-auto overflow-x-hidden relative w-full h-screen">
 
-			<nav class="flex flex-grow basis-0 justify-end">
-				<ul class="flex text-sm [&>li>a]:font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py2">
-					<li><a href="#">Shop</a></li>
-					<li><a href="#">Account</a></li>
-					<li><a href="#">Menu</a></li>
-				</ul>
-			</nav>
-		
-		</header>
+		<div class="snap-center">
+			<HeroSection />
+		</div>
+		<div class="snap-center">
+			<HeroSection />
+		</div>
+		<div class="snap-center">
+			<HeroSection />
+		</div>
 
-
-		<section class="bg-black h-screen w-screen text-center relative overflow-hidden text-white">
-			<div class="relative z-30 h-screen w-screen flex flex-col">
-				<header>
-					<h2 class="pt-40 text-[40px] font-medium tracking-wider mb-1">
-						Experience Tesla
-					</h2>
-					<p class="text-sm font-thin">
-						Schedule a Demo Drive Today
-					</p>
-				</header>
-				<footer class="flex flex-grow flex-col justify-end pb-24">
-					<div>
-						<a class="border-[3.5px] hover:bg-white border-white transition-colors duration-300 hover:text-black rounded text-sm px-[100px] py-2 inline-block" href="#">Demo Drive</a>
-					</div>
-				</footer>
-			</div>
-
-			<div class="absolute top-0 bottom-0 h-full w-full z-10">
-				<video class="object-center object-cover h-full w-full" autoplay muted loop src="/video.webm"></video>
-			</div>
-		</section>
-
-
-		<section class="bg-black h-screen w-screen"> 
-			Hola
-		</section>
 	</main>
 </Layout>
